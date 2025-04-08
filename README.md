@@ -1,15 +1,13 @@
-# cloud-kernel
-kubernetes kernel offline packages, not linux kernal
+# Sealos3专用的k8s二进制安装包
+sealos3版本离线部署k8s集群非常简单,也非常快捷. 但是需要专用的k8s二进制安装包,下载需要按年收费.
 
-# 理念
-Dockerfile给进程打包，描述一个进程应该如何运行，而sealstore中的app就是用来描述应用在k8s集群中是如何运行的，都是打包的原理，而Dockerfile不会去关心应用副本数，负载均衡配置管理这些东西，而sealstore的app会
+后来sealos4之后,k8s不再使用二进制部署,而是连k8s都是直接启动一个镜像,这种容器内套容器的方式,sealos原作者认为非常先进;但并不适合所有场景.
 
-使用：
-```
-git tag 1.14.6
-git push --tags
-```
+sealos4发布之后,作者删除了原有的sealos3专用的k8s安装包.
 
-# 虚拟机申请
+我正好收藏了一份,现在放出来贡献给有需要的人.
 
-把配置好的.aliyun/config.json进行base64加密，设置成drone的secret
+需要的可以在release下载.
+
+k8s二进制离线安装包使用方法,参考: https://blog.csdn.net/omaidb/article/details/116599552
+
